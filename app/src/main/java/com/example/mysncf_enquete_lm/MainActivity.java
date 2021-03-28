@@ -2,6 +2,7 @@ package com.example.mysncf_enquete_lm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -27,6 +28,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-
+        String rer ="";
+        switch (v.getId())
+        {
+            case R.id.idRerA : rer = "rerA"; break;
+            case R.id.idRerB : rer = "rerB"; break;
+            case R.id.idRerC : rer = "rerC"; break;
+            case R.id.idRerD : rer = "rerD"; break;
+            case R.id.idRerE : rer = "rerB"; break;
+        }
+        Intent unIntent = new Intent(this, Inscription.class);
+        unIntent.putExtra("rer", rer);
+        this.startActivity(unIntent);
     }
 }
