@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/idRerA"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/RERB" />
+        app:srcCompat="@drawable/rerb" />
 
     <ImageButton
         android:id="@+id/idRerC"

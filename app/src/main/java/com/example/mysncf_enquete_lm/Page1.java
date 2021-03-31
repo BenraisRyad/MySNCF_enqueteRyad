@@ -1,7 +1,6 @@
 package com.example.mysncf_enquete_lm;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class Page1 extends AppCompatActivity {
