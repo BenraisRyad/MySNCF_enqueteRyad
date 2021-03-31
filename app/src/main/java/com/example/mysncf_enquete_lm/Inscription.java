@@ -1,12 +1,10 @@
 package com.example.mysncf_enquete_lm;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelStoreOwner;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,7 +17,7 @@ public class Inscription extends AppCompatActivity implements View.OnClickListen
 
         private EditText txtNom, txtPrenom ;
         private Spinner spAge, spFrequence ;
-        private Button btParticiper ;
+        private Button btParticiper;
         private String rer;
 
 
@@ -31,8 +29,8 @@ public class Inscription extends AppCompatActivity implements View.OnClickListen
         this.txtPrenom = (EditText) findViewById(R.id.idPrenom);
         this.spAge = (Spinner) findViewById(R.id.idAge);
         this.spFrequence = (Spinner) findViewById(R.id.idFrequence);
-        this.rer = this.getIntent().getStringExtra("rer").toString();
         this.btParticiper = (Button) findViewById(R.id.idParticiper);
+        this.rer = this.getIntent().getStringExtra("rer").toString();
         this.btParticiper.setOnClickListener(this);
 
         // remplir le spinner age
@@ -47,13 +45,13 @@ public class Inscription extends AppCompatActivity implements View.OnClickListen
 
         // remplir le spinner Frequence
         ArrayList <String> lesFrequence = new ArrayList<>();
-        lesAges.add ("quotidienne");
-        lesAges.add ("hebdomadaire");
-        lesAges.add ("mensuelle");
-        lesAges.add ("annuelle");
-        ArrayAdapter unAdapterFrequence = new ArrayAdapter(this,
+        lesFrequence.add ("quotidienne");
+        lesFrequence.add ("hebdomadaire");
+        lesFrequence.add ("mensuelle");
+        lesFrequence.add ("annuelle");
+        ArrayAdapter<String> unAdapterFrequence = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item, lesFrequence);
-        this.spAge.setAdapter(unAdapterFrequence);
+        this.spFrequence.setAdapter(unAdapterFrequence);
      }
 
     @Override
