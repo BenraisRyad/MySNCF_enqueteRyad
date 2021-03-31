@@ -1,11 +1,10 @@
 package com.example.mysncf_enquete_lm;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelStoreOwner;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -69,6 +68,10 @@ public class Inscription extends AppCompatActivity implements View.OnClickListen
             //on inscrit le candidat.
 
             //et après on passe l'entente.
+            //qu'est ce que fait cette partie ?
+            Intent unIntent = new Intent (this, Page1.class);
+            unIntent.putExtra("rer", this.rer);
+            this.startActivity(unIntent);
         }
 
     }
