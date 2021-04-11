@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.imgRerC.setOnClickListener(this);
         this.imgRerD.setOnClickListener(this);
         this.imgRerE.setOnClickListener(this);
+        //initialiser les Enquetes
+        SNCF.initialiser();
     }
 
     @Override

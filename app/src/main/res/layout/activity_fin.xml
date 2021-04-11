@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="406dp"
-        android:layout_height="150dp"
+        android:layout_width="354dp"
+        android:layout_height="137dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="3dp"
@@ -22,10 +22,11 @@
 
     <TextView
         android:id="@+id/idTitre"
-        android:layout_width="407dp"
-        android:layout_height="108dp"
+        android:layout_width="353dp"
+        android:layout_height="106dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="3dp"
+        android:layout_marginBottom="11dp"
         android:background="#00BCD4"
         android:backgroundTint="#00BCD4"
         android:text="TextView"
@@ -33,36 +34,37 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/idSmiley"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-    <ImageView
-        android:id="@+id/idSmiley"
-        android:layout_width="409dp"
-        android:layout_height="227dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/idResultats"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idTitre"
-        app:srcCompat="@drawable/Smiley_1" />
-
     <Button
         android:id="@+id/idResultats"
-        android:layout_width="398dp"
-        android:layout_height="108dp"
+        android:layout_width="356dp"
+        android:layout_height="91dp"
         android:layout_marginStart="6dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="7dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="48dp"
         android:background="#9C27B0"
         android:backgroundTint="#9C27B0"
         android:text="VOIR LES RESULTATS"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idSmiley" />
+
+    <ImageView
+        android:id="@+id/idSmiley"
+        android:layout_width="358dp"
+        android:layout_height="188dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="33dp"
+        app:layout_constraintBottom_toTopOf="@+id/idResultats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTitre"
+        app:srcCompat="@drawable/smiley_1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

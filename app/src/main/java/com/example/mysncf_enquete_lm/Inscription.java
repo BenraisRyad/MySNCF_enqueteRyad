@@ -66,11 +66,14 @@ public class Inscription extends AppCompatActivity implements View.OnClickListen
             String frequence = this.spFrequence.getSelectedItem().toString();
 
             //on inscrit le candidat.
+            Candidat unCandidat = new Candidat(nom, prenom, age, frequence);
+            SNCF.getEnquete(this.rer).ajouterCandidat(unCandidat);
 
             //et après on passe l'entente.
             //qu'est ce que fait cette partie ?
             Intent unIntent = new Intent (this, Page1.class);
             unIntent.putExtra("rer", this.rer);
+            unIntent.putExtra ("nom", nom); //cle primaire des candidats
             this.startActivity(unIntent);
         }
 

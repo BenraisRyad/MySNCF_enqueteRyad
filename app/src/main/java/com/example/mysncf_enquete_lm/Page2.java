@@ -12,7 +12,7 @@ public class Page2 extends AppCompatActivity implements View.OnClickListener
 {
     private RadioGroup rgInformatique, rgService;
     private Button btTerminer;
-    private String rer;
+    private String rer, nom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,8 @@ public class Page2 extends AppCompatActivity implements View.OnClickListener
         this.rgService = (RadioGroup) findViewById(R.id.idService);
         this.btTerminer = (Button ) findViewById (R.id.idTerminer);
         this.rer = this.getIntent().getStringExtra("rer").toString();
+        this.nom = this.getIntent().getStringExtra("nom").toString();
+
         this.btTerminer.setOnClickListener(this);
     }
 
@@ -31,10 +33,28 @@ public class Page2 extends AppCompatActivity implements View.OnClickListener
         if (v.getId() == R.id.idTerminer)
         {
             // on calcule le score des réponse
+            int score =0;
+            switch (this.rgInformatique.getCheckedRadioButtonId())
+            {
+                case R.id.idInformation1 : score = 16; break;
+                case R.id.idInformation2 : score = 12; break;
+                case R.id.idInformation3 : score = 8; break;
+            }
+            SNCF.getEnquete(this.rer).getCandidat(this.nom).ajouterReponse("Information", score);
+
+            score =0;
+            switch (this.rgService.getCheckedRadioButtonId())
+            {
+                case R.id.idService1 : score = 16; break;
+                case R.id.idService2 : score = 12; break;
+                case R.id.idService3 : score = 8; break;
+            }
+            SNCF.getEnquete(this.rer).getCandidat(this.nom).ajouterReponse("Service", score);
 
             // on passe à la page suivante
             Intent unIntent = new Intent(this, Fin.class);
             unIntent.putExtra("rer", this.rer);
+            unIntent.putExtra("nom",this.nom);
             this.startActivity(unIntent);
         }
     }

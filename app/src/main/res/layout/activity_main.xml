@@ -10,11 +10,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="412dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/idRerC"
+        android:layout_width="409dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/idRerB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,8 +23,8 @@
 
     <ImageButton
         android:id="@+id/idRerA"
-        android:layout_width="192dp"
-        android:layout_height="100dp"
+        android:layout_width="169dp"
+        android:layout_height="94dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="17dp"
@@ -39,10 +39,9 @@
 
     <ImageButton
         android:id="@+id/idRerB"
-        android:layout_width="190dp"
-        android:layout_height="95dp"
+        android:layout_width="167dp"
+        android:layout_height="93dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/idRerD"
@@ -53,8 +52,8 @@
 
     <ImageButton
         android:id="@+id/idRerC"
-        android:layout_width="191dp"
-        android:layout_height="91dp"
+        android:layout_width="166dp"
+        android:layout_height="84dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="9dp"
@@ -82,11 +81,10 @@
 
     <ImageButton
         android:id="@+id/idRerE"
-        android:layout_width="413dp"
-        android:layout_height="107dp"
+        android:layout_width="412dp"
+        android:layout_height="98dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="2dp"
-        android:layout_marginBottom="26dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/idTrain"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,12 +95,12 @@
 
     <ImageButton
         android:id="@+id/idTrain"
-        android:layout_width="414dp"
-        android:layout_height="174dp"
+        android:layout_width="404dp"
+        android:layout_height="128dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="23dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="33dp"
+        android:layout_marginBottom="24dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
