@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Page2">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="406dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="13dp"
+        android:background="#00BCD4"
+        android:outlineAmbientShadowColor="#FFFFFF"
+        android:text="Quel est votre avis sur l'information? "
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/idInformation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idService" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="406dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="18dp"
+        android:background="#00BCD4"
+        android:outlineAmbientShadowColor="#FFFFFF"
+        android:text="Quel est votre avis sur le service ? "
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/idService"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <RadioGroup
+        android:id="@+id/idService"
+        android:layout_width="407dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+        <RadioButton
+            android:id="@+id/idService1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trés Satisfait" />
+
+        <RadioButton
+            android:id="@+id/idService2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Satisfait" />
+
+        <RadioButton
+            android:id="@+id/idService3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peu Satisfait" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/idInformation"
+        android:layout_width="411dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/idTerminer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+        <RadioButton
+            android:id="@+id/idInformation1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trés Satisfait" />
+
+        <RadioButton
+            android:id="@+id/idInformation2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Satisfait" />
+
+        <RadioButton
+            android:id="@+id/idInformation3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peu Satisfait" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/idTerminer"
+        android:layout_width="408dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="8dp"
+        android:text="TERMINER"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idInformation" />
+</androidx.constraintlayout.widget.ConstraintLayout>

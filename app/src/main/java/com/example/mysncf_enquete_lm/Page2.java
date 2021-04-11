@@ -8,34 +8,31 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
 
-public class Page1 extends AppCompatActivity implements View.OnClickListener {
-    private RadioGroup rgPonctualiter, rgPropreter;
-    private Button btSuivant;
-    private String rer;
+public class Page2 extends AppCompatActivity implements View.OnClickListener {
+    private RadioGroup rgInformatique, rgService ;
+    private Button btTerminer ;
+    private String rer ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_page1);
-        this.btSuivant = (Button) findViewById(R.id.idSuivant1);
-        this.rgPonctualiter = (RadioGroup) findViewById(R.id.idPonctualiter);
-        this.rgPropreter = (RadioGroup ) findViewById (R.id.idPropreter);
+        setContentView(R.layout.activity_page2);
+        this.rgInformatique = (RadioGroup) findViewById(R.id.idInformation);
+        this.rgService = (RadioGroup) findViewById(R.id.idService);
+        this.btTerminer = (Button ) findViewById (R.id.idTerminer);
         this.rer = this.getIntent().getStringExtra("rer").toString();
-
-        this.btSuivant.setOnClickListener(this);
-
+        this.btTerminer.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.idSuivant1)
+        if(v.getId() == R.id.idTerminer)
         {
             // on calcule le score des réponse
 
             // on passe à la page suivante
-            Intent unIntent = new Intent ( this, page2.class)
+            Intent unIntent = new Intent ( this, Fin.class)
             unIntent.putExtra("rer", this.rer);
             this.startActivities(unIntent);
         }
-    }
 }
