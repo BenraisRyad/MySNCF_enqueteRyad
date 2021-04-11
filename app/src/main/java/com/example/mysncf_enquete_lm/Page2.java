@@ -8,10 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
 
-public class Page2 extends AppCompatActivity implements View.OnClickListener {
-    private RadioGroup rgInformatique, rgService ;
-    private Button btTerminer ;
-    private String rer ;
+public class Page2 extends AppCompatActivity implements View.OnClickListener
+{
+    private RadioGroup rgInformatique, rgService;
+    private Button btTerminer;
+    private String rer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +26,16 @@ public class Page2 extends AppCompatActivity implements View.OnClickListener {
     }
 
     @Override
-    public void onClick(View v) {
-        if(v.getId() == R.id.idTerminer)
+    public void onClick(View v)
+    {
+        if (v.getId() == R.id.idTerminer)
         {
             // on calcule le score des réponse
 
             // on passe à la page suivante
-            Intent unIntent = new Intent ( this, Fin.class)
+            Intent unIntent = new Intent(this, Fin.class);
             unIntent.putExtra("rer", this.rer);
-            this.startActivities(unIntent);
+            this.startActivity(unIntent);
         }
+    }
 }

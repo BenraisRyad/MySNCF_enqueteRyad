@@ -33,9 +33,9 @@ public class Page1 extends AppCompatActivity implements View.OnClickListener {
             // on calcule le score des réponse
 
             // on passe à la page suivante
-            Intent unIntent = new Intent ( this, page2.class)
+            Intent unIntent = new Intent ( this, Page2.class);
             unIntent.putExtra("rer", this.rer);
-            this.startActivities(unIntent);
+            this.startActivity(unIntent);
         }
     }
 }

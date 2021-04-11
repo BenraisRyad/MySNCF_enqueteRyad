@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mysncf_enquete_lm">
-        <activity android:name=".Fin"></activity>
+        <activity android:name=".Resultats"></activity>
+        <activity android:name=".Fin" />
         <activity android:name=".Page2" />
         <activity android:name=".Page1" />
         <activity android:name=".Inscription" />
